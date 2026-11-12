@@ -1,0 +1,39 @@
+{
+  "task": "multiclass",
+  "model": "Decision Tree",
+  "model_key": "decision_tree",
+  "hyperparameter": "max_depth",
+  "best_value": "4",
+  "best_params": {
+    "max_depth": 4,
+    "min_samples_leaf": 20
+  },
+  "selection_metric": "accuracy",
+  "cv_mean_selection_score": 0.5478153228504516,
+  "cv_std_selection_score": 0.01459935357841337,
+  "cv_mean_weighted_f1": 0.5219369782013646,
+  "cv_std_weighted_f1": 0.01848780941065944,
+  "cv_mean_accuracy": 0.5478153228504516,
+  "cv_std_accuracy": 0.01459935357841337,
+  "tuning_seconds": 2.6285956659994554,
+  "training_seconds": 0.0038442079967353493,
+  "prediction_seconds": 0.0004461670032469556,
+  "train": {
+    "accuracy": 0.6189697465249386,
+    "weighted_precision": 0.5829873052236677,
+    "weighted_recall": 0.6189697465249386,
+    "weighted_f1": 0.5928166276949485,
+    "macro_f1": 0.2918031422282408,
+    "balanced_accuracy": 0.29028587266181105
+  },
+  "validation": {
+    "accuracy": 0.5441176470588235,
+    "weighted_precision": 0.5058561280685951,
+    "weighted_recall": 0.5441176470588235,
+    "weighted_f1": 0.5230047438330171,
+    "macro_f1": 0.25718279569892477,
+    "balanced_accuracy": 0.26154528174314623
+  },
+  "convergence_warning_count": 0,
+  "final_iterations": null
+}

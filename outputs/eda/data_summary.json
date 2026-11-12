@@ -1,0 +1,18 @@
+{
+  "raw_samples": 1599,
+  "features": 11,
+  "exact_duplicates_removed": 240,
+  "analysis_samples": 1359,
+  "train_samples": 1223,
+  "validation_samples": 136,
+  "missing_values": 0,
+  "quality_classes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "input_sha256": "4a402cf041b025d4566d954c3b9ba8635a3a8a01e039005d97d6a710278cf05e"
+}

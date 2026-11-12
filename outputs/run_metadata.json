@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "started_utc": "2026-11-11T18:39:16.382747+00:00",
+  "reference_repository": "https://github.com/abbyzhang0918/ESE4170_Project_Group5",
+  "reference_commit": "6d4a7f5c710f9a7634644fd387b8c606b59a3f2a",
+  "source_file": "/Users/abby/Desktop/WashU/3rd year/CSE 5104/CSE5104-Project-2/data/raw/winequality-red.csv",
+  "random_seed": 42,
+  "cv_folds": 5,
+  "validation_fraction_requested": 0.1,
+  "selection_metric": {
+    "binary": "weighted_f1",
+    "multiclass": "accuracy"
+  },
+  "parallel_jobs": 1,
+  "blas_threads": 1,
+  "python": "3.11.0 (v3.11.0:deaf509e8f, Oct 24 2022, 14:43:23) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "code_sha256": {
+    "run_experiments.py": "d4c20d1a4b14bb67cb178b90ae6a1fe7c56c503c72578f59b44e1af896bc0d9b"
+  },
+  "completed_utc": "2026-11-11T18:43:40.264130+00:00",
+  "convergence_warning_count": 0,
+  "experiments_completed": 8
+}

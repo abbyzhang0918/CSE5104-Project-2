@@ -1,0 +1,40 @@
+{
+  "task": "binary",
+  "model": "SVM",
+  "model_key": "svm",
+  "hyperparameter": "C",
+  "best_value": "1",
+  "best_params": {
+    "C": 1
+  },
+  "selection_metric": "weighted_f1",
+  "cv_mean_selection_score": 0.7416377436268986,
+  "cv_std_selection_score": 0.024842870796276954,
+  "cv_mean_weighted_f1": 0.7416377436268986,
+  "cv_std_weighted_f1": 0.024842870796276954,
+  "cv_mean_accuracy": 0.7416159250585481,
+  "cv_std_accuracy": 0.024706367248360686,
+  "tuning_seconds": 2.029798582996591,
+  "training_seconds": 0.025535124994348735,
+  "prediction_seconds": 0.005203749999054708,
+  "train": {
+    "accuracy": 0.7964022894521668,
+    "weighted_precision": 0.7985274150633469,
+    "weighted_recall": 0.7964022894521668,
+    "weighted_f1": 0.7965698170984553,
+    "macro_f1": 0.7962797082475654,
+    "balanced_accuracy": 0.7976665808002747
+  },
+  "validation": {
+    "accuracy": 0.7573529411764706,
+    "weighted_precision": 0.7576190172710471,
+    "weighted_recall": 0.7573529411764706,
+    "weighted_f1": 0.757445017362938,
+    "macro_f1": 0.7567084078711985,
+    "balanced_accuracy": 0.7569444444444444
+  },
+  "convergence_warning_count": 0,
+  "final_iterations": [
+    1165
+  ]
+}

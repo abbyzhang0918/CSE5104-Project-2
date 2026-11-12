@@ -1,0 +1,38 @@
+{
+  "task": "binary",
+  "model": "Random Forest",
+  "model_key": "random_forest",
+  "hyperparameter": "n_estimators",
+  "best_value": "200",
+  "best_params": {
+    "n_estimators": 200
+  },
+  "selection_metric": "weighted_f1",
+  "cv_mean_selection_score": 0.7481821475909748,
+  "cv_std_selection_score": 0.019160511980969443,
+  "cv_mean_weighted_f1": 0.7481821475909748,
+  "cv_std_weighted_f1": 0.019160511980969443,
+  "cv_mean_accuracy": 0.7481264637002342,
+  "cv_std_accuracy": 0.01902828061785016,
+  "tuning_seconds": 12.093286833012826,
+  "training_seconds": 0.41253774998767767,
+  "prediction_seconds": 0.011130500002764165,
+  "train": {
+    "accuracy": 1.0,
+    "weighted_precision": 1.0,
+    "weighted_recall": 1.0,
+    "weighted_f1": 1.0,
+    "macro_f1": 1.0,
+    "balanced_accuracy": 1.0
+  },
+  "validation": {
+    "accuracy": 0.7720588235294118,
+    "weighted_precision": 0.7723153400038238,
+    "weighted_recall": 0.7720588235294118,
+    "weighted_f1": 0.7721453193409419,
+    "macro_f1": 0.7714533528487018,
+    "balanced_accuracy": 0.7717013888888888
+  },
+  "convergence_warning_count": 0,
+  "final_iterations": null
+}

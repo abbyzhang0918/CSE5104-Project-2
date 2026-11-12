@@ -1,0 +1,40 @@
+{
+  "task": "binary",
+  "model": "ANN",
+  "model_key": "ann",
+  "hyperparameter": "hidden_layer_sizes",
+  "best_value": "150",
+  "best_params": {
+    "hidden_layer_sizes": [
+      150
+    ]
+  },
+  "selection_metric": "weighted_f1",
+  "cv_mean_selection_score": 0.7489846592978548,
+  "cv_std_selection_score": 0.028595519516502382,
+  "cv_mean_weighted_f1": 0.7489846592978548,
+  "cv_std_weighted_f1": 0.028595519516502382,
+  "cv_mean_accuracy": 0.7489762462361994,
+  "cv_std_accuracy": 0.028593645063835244,
+  "tuning_seconds": 8.441797874998883,
+  "training_seconds": 0.2680894579971209,
+  "prediction_seconds": 0.0009699580114101991,
+  "train": {
+    "accuracy": 0.7898609975470156,
+    "weighted_precision": 0.7901037919421205,
+    "weighted_recall": 0.7898609975470156,
+    "weighted_f1": 0.7899395944652557,
+    "macro_f1": 0.7893195521102498,
+    "balanced_accuracy": 0.7895790400137386
+  },
+  "validation": {
+    "accuracy": 0.75,
+    "weighted_precision": 0.75,
+    "weighted_recall": 0.75,
+    "weighted_f1": 0.75,
+    "macro_f1": 0.7491319444444444,
+    "balanced_accuracy": 0.7491319444444444
+  },
+  "convergence_warning_count": 0,
+  "final_iterations": 87
+}
