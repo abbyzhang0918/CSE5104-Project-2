@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "started_utc": "2026-11-12T20:23:49.210772+00:00",
+  "method": "StandardScaler + PCA inside each model pipeline",
+  "n_components": 5,
+  "original_features": 11,
+  "random_seed": 42,
+  "cv_folds": 5,
+  "python": "3.14.2 (v3.14.2:df793163d58, Dec  5 2025, 12:18:06) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-14.8.3-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.4.2",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1"
+  },
+  "code_sha256": {
+    "run_experiments.py": "d4c20d1a4b14bb67cb178b90ae6a1fe7c56c503c72578f59b44e1af896bc0d9b",
+    "dimension_reduction.py": "d3d6aea364e063f45605122bdeb31020d99248e995d7e7b839c7a6634591e2f3"
+  },
+  "completed_utc": "2026-11-12T20:25:21.593698+00:00",
+  "pca_variance_kept": 0.796397412082769,
+  "experiments_completed": 8
+}

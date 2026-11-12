@@ -2,13 +2,14 @@
 
 Implementation, data, and experiment outputs for Random Forest, SVM, ANN, and
 Decision Tree on two red-wine quality classification tasks. This repository
-contains the Part A/B experiments; it does not generate written question answers.
-Part C dimension reduction is not implemented.
+contains the Part A/B experiments and the Part C dimension reduction experiments;
+it does not generate written question answers.
 
 ## Repository layout
 
 ```text
 run_experiments.py           Data preparation, model training, plots, and exports
+dimension_reduction.py      Part C: same experiments after PCA to 5 components
 requirements.txt            Python dependencies
 data/raw/                   Original red/white CSVs and dataset documentation
 outputs/
@@ -20,6 +21,7 @@ outputs/
   results_summary.csv       Metrics and timings for all eight experiments
   model_comparison.png      Validation accuracy and weighted F1 comparison
   run_metadata.json         Run status, versions, seed, and code checksums
+  reduced/                  Part C results (same layout as above, plus PCA files)
 ```
 
 Each model folder contains `cv_results.csv`, `cross_validation.png`,
@@ -37,6 +39,12 @@ Use Python 3.11 or newer. From the project directory:
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python run_experiments.py
+```
+
+Part C (run after `run_experiments.py`, because it reads `outputs/results_summary.csv`):
+
+```bash
+.venv/bin/python dimension_reduction.py
 ```
 
 On Windows, use `.venv\Scripts\python` instead of `.venv/bin/python`.
@@ -98,6 +106,21 @@ The multiclass search was expanded during earlier development after holdout
 results had been examined. These validation results are therefore exploratory;
 new independent data would be needed to confirm generalization. The script's
 parameter selection itself uses only training folds.
+
+### Part C: dimension reduction
+
+`dimension_reduction.py` reduces the 11 predictors to 5 principal components
+(half of 11, rounded down) and repeats the Part B experiments. Every model
+pipeline becomes `StandardScaler` -> `PCA(n_components=5)` -> model, so scaling
+and PCA are fitted only on the training folds during cross-validation and on the
+full training partition for the final fit. Tree models are therefore also
+standardized in Part C, because PCA needs scaled inputs. The data split, CV folds,
+parameter grids, selection metrics, and reported outputs are the same as Part B;
+the script checks that the training split matches `outputs/data/split_manifest.csv`.
+
+Results are saved in `outputs/reduced/`: the same per-model files and summary as
+Part B, `pca_explained_variance.png` (variance kept by each component; the first
+5 keep about 80%), and `comparison_original_vs_pca.png/.csv` (Part B vs Part C).
 
 ## Working with a partner
 
