@@ -119,8 +119,10 @@ parameter grids, selection metrics, and reported outputs are the same as Part B;
 the script checks that the training split matches `outputs/data/split_manifest.csv`.
 
 Results are saved in `outputs/reduced/`: the same per-model files and summary as
-Part B, `pca_explained_variance.png` (variance kept by each component; the first
-5 keep about 80%), and `comparison_original_vs_pca.png/.csv` (Part B vs Part C).
+Part B, `data/` (training and validation sets after PCA, with the response
+variable in the last column), `pca_explained_variance.png` (variance kept by each
+component; the first 5 keep about 80%), and `comparison_original_vs_pca.png/.csv`
+(Part B vs Part C).
 
 ## Working with a partner
 

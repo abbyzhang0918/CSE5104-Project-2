@@ -16,9 +16,9 @@
   "cv_std_weighted_f1": 0.02621420187785853,
   "cv_mean_accuracy": 0.7464904650384744,
   "cv_std_accuracy": 0.026173337551432262,
-  "tuning_seconds": 2.124062957998831,
-  "training_seconds": 0.12483895797049627,
-  "prediction_seconds": 0.0005276660085655749,
+  "tuning_seconds": 2.137125291978009,
+  "training_seconds": 0.12654970900621265,
+  "prediction_seconds": 0.0005322920042090118,
   "train": {
     "accuracy": 0.7547015535568274,
     "weighted_precision": 0.7545358716825524,

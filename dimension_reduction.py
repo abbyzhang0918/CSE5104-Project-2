@@ -64,6 +64,22 @@ def plot_pca_variance(tasks):
     return float(ratios[:N_COMPONENTS].sum())
 
 
+def export_reduced_data(tasks):
+    """Save the training and validation sets after scaling + PCA (fitted on training data)."""
+    for task, task_data in tasks.items():
+        train, validation = task_data["train"], task_data["validation"]
+        target = task_data["target"]
+        reducer = Pipeline([
+            ("scale", StandardScaler()),
+            ("pca", PCA(n_components=N_COMPONENTS, random_state=base.SEED)),
+        ]).fit(train[base.FEATURES])
+        columns = [f"PC{i + 1}" for i in range(N_COMPONENTS)]
+        for partition, frame in [("train", train), ("validation", validation)]:
+            reduced = pd.DataFrame(reducer.transform(frame[base.FEATURES]), columns=columns)
+            reduced[target] = frame[target].to_numpy()
+            reduced.to_csv(OUTPUT / "data" / f"{task}_{partition}_pca.csv", index=False)
+
+
 def compare():
     """Put Part B (all 11 features) and Part C (5 PCA components) side by side."""
     original = pd.read_csv(ROOT / "outputs" / "results_summary.csv")
@@ -94,7 +110,8 @@ def compare():
 
 
 def main():
-    (OUTPUT / "models").mkdir(parents=True, exist_ok=True)
+    for folder in ["data", "models"]:
+        (OUTPUT / folder).mkdir(parents=True, exist_ok=True)
     data_path = ROOT / "data" / "raw" / "winequality-red.csv"
     metadata_path = OUTPUT / "run_metadata.json"
     metadata = {
@@ -121,6 +138,7 @@ def main():
     if not saved.index[saved.partition == "train"].equals(tasks["binary"]["train"].index):
         raise ValueError("Training split differs from Part B. Check the data file and seed.")
 
+    export_reduced_data(tasks)
     variance_kept = plot_pca_variance(tasks)
     print(f"{N_COMPONENTS} PCA components keep {variance_kept:.1%} of the training variance.", flush=True)
 
