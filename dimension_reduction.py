@@ -127,8 +127,7 @@ def main():
     }
     base.write_json(metadata_path, metadata)
 
-    # Rebuild the exact Part B split and CV folds (same seed). prepare_data also
-    # writes the split files, so send those copies to a temporary folder.
+
     with tempfile.TemporaryDirectory() as temp:
         temp = Path(temp)
         for folder in ["data", "eda"]:
